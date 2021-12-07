@@ -7,12 +7,12 @@ namespace Company.Domain
     //
     public class DataManager
     {
-        public ITextFiledsRepository TextFileds { get; set; }
+        public ITextFiledsRepository TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
 
-        public DataManager(ITextFiledsRepository TextFileds, IServiceItemsRepository ServiceItems)
+        public DataManager(ITextFiledsRepository TextFields, IServiceItemsRepository ServiceItems)
         {
-            this.TextFileds = TextFileds;
+            this.TextFields = TextFields;
             this.ServiceItems = ServiceItems;
         }
     }

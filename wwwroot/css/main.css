@@ -64,13 +64,12 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-input, select, textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
-
+/*input, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}*/
 /* Basic */
 html {
   box-sizing: border-box;
@@ -2010,4 +2009,13 @@ ol.default li {
     margin-top: 0;
     padding: 3em 0 1em 0;
   }
+}
+.div-box {
+  padding: 15px 0;
+}
+.div-box label {
+  display: block;
+}
+.div-box a {
+  display: block;
 }

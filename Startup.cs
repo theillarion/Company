@@ -58,8 +58,17 @@ namespace Company
                 options.AccessDeniedPath = "/account/accessdenied";
                 options.SlidingExpiration = true;
             });
+
+            // настройка политики автоизации для Admin
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminArea", policy => policy.RequireRole("admin"));
+            });
             // добавление поддержки MVC
-            services.AddControllersWithViews()
+            services.AddControllersWithViews(options =>
+            {
+                options.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
+            })
                 // совместимость с asp.net core 3.0
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
                 .AddSessionStateTempDataProvider();
@@ -87,6 +96,7 @@ namespace Company
             // регистрируем нужные нам маршруты
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("defualt", "{controller=Home}/{action=Index}/{id?}");
             });
         }

@@ -7,5 +7,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+	config.contentsCss = ['~/js/ckeditor/styles.js', '~/js/ckeditor/contents.css'];
 	config.extraPlugins = 'dragresize';
 };

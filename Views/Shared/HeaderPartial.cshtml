@@ -6,13 +6,13 @@
 				<div class="inner">
 
 					<!-- Logo -->
-						<h1><a href="/" id="logo">ZeroFour</a></h1>
+						<h1><a href="/" id="logo">@Config.CompanyName</a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
-							<ul>
-								<li><a href="/">Home</a></li>
-								<li>
+							<ul class="menu">
+								<li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+								@*<li>
 									<a href="#">Dropdown</a>
 									<ul>
 										<li><a href="#">Lorem ipsum dolor</a></li>
@@ -29,8 +29,18 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li class="current_page_item"><a href="right-sidebar.html">Right Sidebar</a></li>
+								@if (Model.Any())
+								{
+									<a>Наши услуги</a>
+									<ul>
+										@foreach(ServiceItem entity in Model)
+										{
+											<li><a href=""></a>@entity.Title</li>
+										}
+									</ul>
+								}*@
+								<li><a asp-area="" asp-controller="Services" asp-action="Index">Наши услуги</a></li>
+								<li><a asp-area="" asp-controller="Home" asp-action="Contacts">Контакты</a></li>
 								<li><a href="/admin">Admin Panel</a></li>
 							</ul>
 						</nav>

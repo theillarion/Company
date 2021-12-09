@@ -60,7 +60,7 @@ namespace Company.Domain
             builder.Entity<TextField>().HasData(new TextField
             {
                 Id = new Guid("cb5d6de2-9b95-4432-be1d-d1e8a689111c"),
-                CodeWord = "PageContact",
+                CodeWord = "PageContacts",
                 Title = "Контакты"
             });
             

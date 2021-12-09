@@ -45,11 +45,9 @@
     </div>
 </div>
 
-
-
 <script>
     window.onload = function() {
-        var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.Text)');
+        var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.Text)', {height: 500});
         newCKEdit.updateElement();
     }
 </script>

@@ -12,11 +12,12 @@
   <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
     <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\ServiceItems\" />
     <Folder Include="wwwroot\saas\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\ServiceItems\Edit.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="Views\Account\Login.cshtml" />

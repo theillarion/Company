@@ -2010,3 +2010,12 @@ ol.default li {
     padding: 3em 0 1em 0;
   }
 }
+.div-box {
+  padding: 15px 0;
+}
+.div-box label {
+  display: block;
+}
+.div-box a {
+  display: block;
+}

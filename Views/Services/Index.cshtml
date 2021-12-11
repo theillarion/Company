@@ -17,11 +17,13 @@
 				    <h2>@entity.Title</h2>
 			    </header>
                 <div>
+                    <img src="~/images/ServiceItems/@entity.TitleImagePath" width="200px" height="200px" class="img-left"/>
                     @entity.SubTitle
-                    <img src="~/images/ServiceItems/@entity.TitleImagePath" width="100%" height="100%"/>
-                </div>    
-				<footer>
-                    <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id" class="button icon solid fa-info-circle">Узнать больше</a>
+                </div>
+                <footer>
+				    <br clear=all>
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id" class="button icon solid fa-info-circle">Узнать больше</a>
+                    <br>
                 </footer>
             </section>
         }

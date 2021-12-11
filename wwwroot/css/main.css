@@ -1,5 +1,5 @@
 ﻿@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800");
-@import url("~/css/fontawesome-all.min.css");
+@import url("../css/fontawesome-all.min.css");
 /*
 	ZeroFour by HTML5 UP
 	html5up.net | @ajlkn
@@ -91,7 +91,7 @@ html {
   width: device-width;
 }
 body {
-  background: #303238 url("~/images/images/bg01.png");
+  background: #303238 url("../images/bg01.png");
 }
 body.is-preload * {
   -moz-transition: none !important;
@@ -1153,32 +1153,32 @@ input[type=submit],
 input[type=reset],
 button,
 .button {
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("~/images/bg02.png");
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("~/images/bg02.png");
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("~/images/bg02.png");
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../images/bg02.png");
-    -moz-transition: background-color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
-    -webkit-appearance: none;
-    position: relative;
-    display: inline-block;
-    background-color: #4091bf;
-    border-radius: 8px;
-    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
-    color: #fff !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 0.95em;
-    letter-spacing: 0.075em;
-    padding: 1em 2em;
-    outline: 0;
-    border: 0;
-    white-space: nowrap;
-    cursor: pointer;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../images/bg02.png");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../images/bg02.png");
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../images/bg02.png");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../images/bg02.png");
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-block;
+  background-color: #4091bf;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.95em;
+  letter-spacing: 0.075em;
+  padding: 1em 2em;
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  cursor: pointer;
 }
 input[type=button].icon:before,
 input[type=submit].icon:before,
@@ -2031,4 +2031,9 @@ ol.default li {
 .img-left {
   float: left;
   margin: 0 1em 1em 0;
+}
+
+.img-left-sidebar {
+  float: left;
+  margin: 0 5px 5px 0;
 }

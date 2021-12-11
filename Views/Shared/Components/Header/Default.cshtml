@@ -1,0 +1,14 @@
+﻿@model IQueryable<ServiceItem>
+
+@if (Model.Any())
+{
+	<li class="divided">
+		<a asp-area="" asp-controller="Services" asp-action="Index">Наши услуги</a>
+		<ul>
+			@foreach(ServiceItem entity in Model)
+			{
+				<li><a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">@entity.Title</a></li>
+			}
+		</ul>
+	</li>
+}

@@ -1,0 +1,25 @@
+﻿@model IQueryable<ServiceItem>
+
+@if (Model.Any())
+{
+    <header>
+        <h2 align="center">Наши услуги</h2>
+    </header>
+    @foreach (ServiceItem entity in Model)
+    {    
+        <section>
+            <header class="major">
+				<h3>@entity.Title</h3>
+			</header>
+            <div>
+                <img src="~/images/ServiceItems/@entity.TitleImagePath" width="100px" height="100px" class="img-left-sidebar"/>
+                @entity.SubTitle
+            </div>
+            <footer>
+				<br clear=all>
+                    <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id" class="button icon solid fa-info-circle">Узнать больше</a>
+                <br>
+            </footer>
+        </section>
+    }
+}

@@ -5,6 +5,7 @@
 
 				<!-- Links -->
 					<section>
+						
 						<h2>Filler Links</h2>
 						<ul class="divided">
 							<li><a href="#">Начало</a></li>
@@ -49,6 +50,7 @@
 							<div class="row">
 								<div class="col-6 col-12-small">
 									<dl class="contact">
+										@await Html.PartialAsync("SelectLanguagePartial")
 										<dt>Twitter</dt>
 										<dd><a href="#">@@@Config.CompanyName</a></dd>
 										<dt>Facebook</dt>

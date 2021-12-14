@@ -15,6 +15,8 @@ using Company.Service;
 using Company.Domain;
 using Company.Domain.Repositories.Abstract;
 using Company.Domain.Repositories.EntityFramework;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace Company
 {
@@ -49,7 +51,7 @@ namespace Company
                 options.Password.RequireNonAlphanumeric = false;
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
-            //
+            // Настройка Cookie
             services.ConfigureApplicationCookie((options) =>
             {
                 options.Cookie.Name = "CompanyAuth";
@@ -64,12 +66,35 @@ namespace Company
             {
                 options.AddPolicy("AdminArea", policy => policy.RequireRole("admin"));
             });
+
+            // Настройка локализации
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("ru"),
+                    new CultureInfo("en")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("ru");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
             // добавление поддержки MVC
             services.AddControllersWithViews(options =>
             {
                 options.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
             })
-                .AddSessionStateTempDataProvider();
+                .AddSessionStateTempDataProvider()
+                .AddDataAnnotationsLocalization(options =>
+                {
+                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+                        factory.Create(typeof(SharedResource));
+                })
+                .AddViewLocalization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +104,22 @@ namespace Company
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseRequestLocalization();
+            // Поддерживаемые культуры
+            /*var supportedCultures = new[]
+            {
+                new CultureInfo("ru"),
+                new CultureInfo("en")
+            };
+
+            // включение и настройка локализации
+            app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("ru"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });*/
 
             // включение маршрутизации
             app.UseRouting();

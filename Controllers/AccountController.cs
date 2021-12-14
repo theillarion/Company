@@ -1,5 +1,5 @@
 ﻿using Company.Models;
-
+using Microsoft.Extensions.Localization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

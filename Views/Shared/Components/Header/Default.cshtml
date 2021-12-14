@@ -3,7 +3,7 @@
 @if (Model.Any())
 {
 	<li class="divided">
-		<a asp-area="" asp-controller="Services" asp-action="Index">Наши услуги</a>
+		<a asp-area="" asp-controller="Services" asp-action="Index">@Localizer["Title"]</a>
 		<ul>
 			@foreach(ServiceItem entity in Model)
 			{

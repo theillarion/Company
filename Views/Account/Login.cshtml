@@ -1,6 +1,6 @@
 ﻿@model LoginViewModel
 <div>
-    <h1>Вход в личный кабинет</h1>
+    <h1>@Localizer["Title"]</h1>
     <div>
         <form asp-area="" asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
             <div asp-validation-summary="All"></div>
@@ -10,7 +10,7 @@
                 <span asp-validation-for="UserName"></span>
             </div>
             <div>
-                <label asp-for="Password"></label>
+                <label asp-for="Password">FFFFF</label>
                 <input asp-for="Password" />
                 <span asp-validation-for="Password"></span>
             </div>
@@ -20,7 +20,7 @@
                 <span asp-validation-for="RememberMe"></span>
             </div>
             <div>
-                <input type="submit" value="Войти" />
+                <input type="submit" value="@Localizer["Button"]" />
             </div>
         </form>
     </div>

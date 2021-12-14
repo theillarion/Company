@@ -69,8 +69,6 @@ namespace Company
             {
                 options.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea"));
             })
-                // סמגלוסעטלמסעü ס asp.net core 3.0
-                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0)
                 .AddSessionStateTempDataProvider();
         }
 

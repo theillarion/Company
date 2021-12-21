@@ -14,14 +14,6 @@
 								<li><a asp-area="" asp-controller="Home" asp-action="Index">@Localizer["HomePage"]</a></li>
 								@(await Component.InvokeAsync<HeaderViewComponent>())
 								<li><a asp-area="" asp-controller="Home" asp-action="Contacts">@Localizer["ContactPage"]</a></li>
-								<li>
-									<a>Soon</a>
-									<ul>
-										<li><a href="#">Soon</a></li>
-										<li><a href="#">Soon</a></li>
-										<li><a href="#">Soon</a></li>
-									</ul>
-								</li>
 								<li><a asp-area="admin" asp-controller="Home" asp-action="Index">@Localizer["AdminPage"]</a></li>
 							</ul>
 						</nav>

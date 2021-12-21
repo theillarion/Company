@@ -117,26 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdminPage" xml:space="preserve">
-    <value>Панель Администратора</value>
-    <comment>Название страницы панели администратора в хедере</comment>
+  <data name="AddService" xml:space="preserve">
+    <value>Add service</value>
   </data>
-  <data name="ButtonLearnMore" xml:space="preserve">
-    <value>Узнать больше</value>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Сохранить</value>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
   </data>
-  <data name="ContactPage" xml:space="preserve">
-    <value>Наши контакты</value>
-    <comment>Название страницы контактов в хедере</comment>
+  <data name="EditPages" xml:space="preserve">
+    <value>Edit site pages</value>
   </data>
-  <data name="HomePage" xml:space="preserve">
-    <value>Главная</value>
-    <comment>Название главной страницы в хедере</comment>
+  <data name="LogOut" xml:space="preserve">
+    <value>Log out</value>
   </data>
-  <data name="ServicePage" xml:space="preserve">
-    <value>Наши услуги</value>
-    <comment>Название страницы услуг в хедере</comment>
+  <data name="Title" xml:space="preserve">
+    <value>Our services</value>
   </data>
 </root>

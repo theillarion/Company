@@ -396,6 +396,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Areas\Admin\Views\Home\Index.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Areas\Admin\Views\Home\Index.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Models\LoginViewModel.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>

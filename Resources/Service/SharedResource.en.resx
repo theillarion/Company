@@ -117,7 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdminPage" xml:space="preserve">
+    <value>Admin Panel</value>
+    <comment>Название страницы панели администратора в хедере</comment>
+  </data>
   <data name="ButtonLearnMore" xml:space="preserve">
     <value>To learn more</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ContactPage" xml:space="preserve">
+    <value>Our contacts</value>
+    <comment>Название страницы контактов в хедере</comment>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+    <comment>Название главной страницы в хедере</comment>
+  </data>
+  <data name="ServicePage" xml:space="preserve">
+    <value>Our services</value>
+    <comment>Название страницы услуг в хедере</comment>
   </data>
 </root>
